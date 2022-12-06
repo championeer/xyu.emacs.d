@@ -73,3 +73,5 @@
 
 (global-set-key "\M-n" 'next-multilines) ;;custom
 (global-set-key "\M-p" 'previous-multilines) ;;custom
+(global-set-key "f5" 'org-clock-in) ;;start a timer
+(global-set-key "f6" 'org-clock-out) ;;stop a timer

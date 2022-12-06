@@ -13,7 +13,7 @@
 ;;设置全局快捷键调用capture
 (define-key global-map "\C-cc" 'org-capture)
 ;;设置默认目录
-(setq org-directory "~/Dropbox/Org-Notes/")
+(setq org-directory "~/Org-Notes/")
 ;;
 ;;设置全局缩进模式
 (setq org-startup-indented t)
@@ -78,7 +78,7 @@
 ;;(setq org-agenda-files
   ;;    (quote ("~/Dropbox/Org-Notes/everyday.org" "~/Dropbox/Org-Notes/work/meeting.org" "~/Dropbox/Org-Notes/work/task.org" "~/Dropbox/Org-Notes/work/project.org" "~/Dropbox/Org-Notes/personal/habit.org" "~/Dropbox/Org-Notes/work/worklog.org")))
 (setq org-agenda-files
-      (quote ("~/Dropbox/Org-Notes/" "~/Dropbox/Org-Notes/work/" "~/Dropbox/Org-Notes/personal/")))
+      (quote ("~/Org-Notes/" "~/Org-Notes/work/" "~/Org-Notes/personal/")))
 
 ;;(setq org-agenda-span 'week)
 (setq org-agenda-span 'day)
@@ -101,8 +101,8 @@
                                    )))
 ;;设置日记
 (setq org-agenda-include-diary t)
-(setq org-agenda-diary-file "~/Dropbox/Org-Notes/personal/mydiary") ;;2020-03-02 10:47:06
-(setq diary-file "~/Dropbox/Org-Notes/personal/mydiary")
+(setq org-agenda-diary-file "~/Org-Notes/personal/mydiary") ;;2020-03-02 10:47:06
+(setq diary-file "~/Org-Notes/personal/mydiary")
 ;;--END--
 ;;--设置capture模板--
 ;;(setq org-default-notes-file (concat org-directory "capture.org"))
@@ -158,28 +158,28 @@
 
 (setq org-capture-templates
       '(("t" "TASK" entry (file+headline "work/task.org" "Tasks")
-         "* TODO %i%? :@work: \n %U\n From: %a\n")
+         "* TODO %i%? [/] :@work: \n %U\n From: %a\n")
         ("n" "NOTE" entry (file "note.org")
          "* %i%? :NOTE: \n created on %T\n From: %a\n")
         ("m" "MEETING" entry (file+headline "work/meeting.org" "Meetings")
-         "* TODO %i%? :MEETING: \n created on %U\n")
+         "* TODO %i%? :MEETING:@work: \n created on %U\n")
         ("w" "WORKLOG" entry
-         (file+function "~/Dropbox/Org-Notes/everyday.org"
+         (file+function "everyday.org"
                         my-org-goto-last-worklog-headline)
          "* %i%? :@work: \n%T")
         ("l" "LIFELOG" entry
-         (file+function "~/Dropbox/Org-Notes/everyday.org"
+         (file+function "everyday.org"
                         my-org-goto-last-lifelog-headline)
          "* %i%? :@life: \n%T")
         ("e" "EVENT" entry
-         (file+function "~/Dropbox/Org-Notes/everyday.org"
+         (file+function "everyday.org"
                         my-org-goto-last-event-headline)
          "* %i%? \n%T")))
 
 (defun newday ()
   (interactive)
   (progn
-    (find-file "~/Dropbox/Org-Notes/everyday.org")
+    (find-file "~/Org-Notes/everyday.org")
     (goto-char (point-max))
     (insert "*" ?\s (format-time-string "%Y-%m-%d %A") ?\n
             "** PLAN\n"

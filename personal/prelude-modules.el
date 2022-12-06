@@ -77,14 +77,14 @@
 ;; (require 'prelude-go)
 ;; (require 'prelude-haskell)
 (require 'prelude-js)
-(require 'prelude-latex)
+;; (require 'prelude-latex)
 (require 'prelude-lisp) ;; Common setup for Lisp-like languages
 ;; (require 'prelude-literate-programming) ;; Setup for Literate Programming
 (require 'prelude-lsp) ;; Base setup for the Language Server Protocol
 ;; (require 'prelude-lua)
 ;; (require 'prelude-ocaml)
 (require 'prelude-perl)
-(require 'prelude-python)
+;; (require 'prelude-python)
 ;; (require 'prelude-racket)
 ;; (require 'prelude-ruby)
 ;; (require 'prelude-rust)
