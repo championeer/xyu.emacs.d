@@ -158,11 +158,11 @@
 
 (setq org-capture-templates
       '(("t" "TASK" entry (file+headline "work/task.org" "Tasks")
-         "* TODO %?\n %U\n From: %a\n")
+         "* TODO %i%? :@work: \n %U\n From: %a\n")
         ("n" "NOTE" entry (file "note.org")
-         "* %? :NOTE: \n created on %T\n From: %a\n")
+         "* %i%? :NOTE: \n created on %T\n From: %a\n")
         ("m" "MEETING" entry (file+headline "work/meeting.org" "Meetings")
-         "* TODO %?\n created on %U\n")
+         "* TODO %i%? :MEETING: \n created on %U\n")
         ("w" "WORKLOG" entry
          (file+function "~/Dropbox/Org-Notes/everyday.org"
                         my-org-goto-last-worklog-headline)
