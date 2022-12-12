@@ -12,6 +12,9 @@
 ;;自动保存
 (setq auto-save-visited-mode t)
 (auto-save-visited-mode +1)
+;;自动刷新buffer
+;;（global-auto-revert-mode t）
+(setq auto-revert-use-notify nil)
 ;;设置Emacs启动窗口大小，来自：http://kimi.im/2019-02-09-emacs-frame-dimention
 (if (not (eq window-system nil))
     (progn
