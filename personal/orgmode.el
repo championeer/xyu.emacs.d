@@ -131,6 +131,7 @@
 ;;--END--
 ;; Org中插入图片
 ;;(setq org-download-method 'directory)
+(require 'org-download)
 (setq org-download-method 'directory
       org-download-image-dir (concat "img/"  (format-time-string "%Y") "/")
       org-download-image-org-width 600
