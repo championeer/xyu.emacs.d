@@ -1,5 +1,5 @@
-;;(require 'keycast)
-;;(keycast-mode t)
+(require 'keycast)
+(keycast-mode t)
 ;;(prelude-require-package 'keycast)
 ;;设置默认换行
 (global-visual-line-mode 1)
