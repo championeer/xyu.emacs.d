@@ -78,3 +78,8 @@
 (global-set-key "\M-p" 'previous-multilines) ;;custom
 (global-set-key (kbd "<f5>") 'org-clock-in) ;;start a timer
 (global-set-key (kbd "<f6>") 'org-clock-out) ;;stop a timer
+
+;;Find file in project
+(require 'find-file-in-project)
+(ivy-mode 1)
+(setq ffip-project-root "~/Org-Notes")
