@@ -132,10 +132,12 @@
 ;; Org中插入图片
 ;;(setq org-download-method 'directory)
 (require 'org-download)
-(setq org-download-method 'directory
-      org-download-image-dir (concat "img/"  (format-time-string "%Y") "/")
-      org-download-image-org-width 600
-      org-download-heading-lvl 1)
+;(setq org-download-method 'directory
+      ;;org-download-image-dir (concat "img/"  (format-time-string "%Y") "/")
+      ;;org-download-image-org-width 600
+;;org-download-heading-lvl 1)
+(setq-default org-download-heading-lvl nil)
+(setq-default org-download-image-dir "./images")
 ;;时间
 ;;C-c . 插入时间
 ;;C-c ! 插入不活跃的时间
