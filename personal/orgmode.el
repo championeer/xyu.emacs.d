@@ -3,13 +3,13 @@
   ;;        (lambda()
 ;;        (setq-local line-spacing 0.45))
 (add-hook 'org-mode-hook
-          (lambda ()
-            (kill-local-variable 'line-spacing) ;; 如果之前设置的 local 变量没有
-            ;; 删除，可能会导致后面的设置无效。
-            (setq-local default-text-properties
-                        '(line-spacing 0.25     ;; 必须两项组合，
-                                       line-height 1.45      ;; 才能起到效果。
-                                       ))))
+        (lambda ()
+        (kill-local-variable 'line-spacing) ;; 如果之前设置的 local 变量没有
+           ;; 删除，可能会导致后面的设置无效。
+      (setq-local default-text-properties
+                '(line-spacing 0.25     ;; 必须两项组合，
+                             line-height 1.45      ;; 才能起到效果。
+                           ))))
 ;;设置全局快捷键调用capture
 (define-key global-map "\C-cc" 'org-capture)
 ;;设置默认目录
@@ -19,8 +19,8 @@
 (setq org-startup-indented t)
 ;;
 ;;--美化orgmode--
-(require 'org-bullets)
-(add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
+;;(require 'org-bullets)
+;;(add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
 ;;
 ;;(prelude-require-package 'org-bullets
   ;;           :custom

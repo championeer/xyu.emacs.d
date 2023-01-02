@@ -1,6 +1,18 @@
+;;改键，将复制粘贴等动作统一为系统操作命令
+(global-set-key (kbd "s-a") 'mark-whole-buffer) ;;对应Windows上面的Ctrl-a 全选
+(global-set-key (kbd "s-c") 'kill-ring-save) ;;对应Windows上面的Ctrl-c 复制
+(global-set-key (kbd "s-s") 'save-buffer) ;; 对应Windows上面的Ctrl-s 保存
+(global-set-key (kbd "s-v") 'yank) ;;对应Windows上面的Ctrl-v 粘贴
+(global-set-key (kbd "s-z") 'undo) ;;对应Windows上面的Ctrol-z 撤销
+(global-set-key (kbd "s-x") 'kill-region) ;;对应Windows上面的Ctrol-x 剪切
+;;----
 (require 'keycast)
 (keycast-mode t)
 ;;(prelude-require-package 'keycast)
+;;行号
+;;(setq line-number-mode t)
+(global-display-line-numbers-mode)
+(setq display-line-numbers-width-start t)
 ;;设置默认换行
 (global-visual-line-mode 1)
 ;;设置ivy-rich，可以显示命令的解释
